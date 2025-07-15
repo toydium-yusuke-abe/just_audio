@@ -2171,7 +2171,7 @@ class _ProxyHttpServer {
       }
     }, onDone: () {
       _running = false;
-    }, onError: (Object e, StackTrace st) {
+    }, onError: (Object e, StackTrace st) async {
       _running = false;
       try {
         await _server.close(force: true);
